@@ -1,0 +1,165 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+}
+
+header {
+    background-color: #1e3c2c;
+    color: white;
+    padding: 1rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    flex-wrap: wrap;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 8px 12px;
+    transition: background 0.3s;
+}
+
+nav ul li a:hover {
+    background-color: #ff8c00;
+    border-radius: 5px;
+    color: #1e3c2c;
+}
+
+nav ul li a.active {
+    background-color: #ff8c00;
+    border-radius: 5px;
+    color: #1e3c2c;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+h1, h2, h3 {
+    color: #1e3c2c;
+    margin-bottom: 15px;
+}
+
+h2 {
+    text-align: center;
+}
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    margin: 30px 0;
+}
+
+.zoom-card {
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    text-align: center;
+    padding: 15px;
+    width: 280px;
+    transition: transform 0.2s;
+}
+
+.zoom-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+.zoom-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    transition: width 0.2s ease;
+}
+
+.zoom-controls {
+    margin: 12px 0;
+}
+
+.zoom-btn {
+    background-color: #ff8c00;
+    border: none;
+    padding: 6px 14px;
+    margin: 4px;
+    border-radius: 25px;
+    cursor: pointer;
+    font-weight: bold;
+    color: white;
+}
+
+.zoom-btn:hover {
+    background-color: #e07a00;
+}
+
+.zoom-card p {
+    margin-top: 8px;
+    font-weight: bold;
+    color: #1e3c2c;
+}
+
+.banner {
+    width: 100%;
+    border-radius: 12px;
+    margin: 20px 0;
+}
+
+footer {
+    text-align: center;
+    padding: 15px;
+    background-color: #1e3c2c;
+    color: white;
+    margin-top: 30px;
+}
+
+@media (max-width: 768px) {
+    .gallery {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+/* إزالة الحدود والحواف من جميع الصور التي لها class="text-effect-img" */
+.text-effect-img {
+    max-width: 350px;
+    width: 90%;
+    height: auto;
+    display: block;
+    margin: 20px auto;
+    border: none;          /* إزالة أي حدود */
+    outline: none;         /* إزالة أي إطار تحديد */
+    background: transparent; /* خلفية شفافة */
+    box-shadow: none;      /* إزالة أي ظل */
+}
+
+/* أو بشكل عام لجميع الصور داخل الحاوية */
+.container img {
+    border: none;
+    outline: none;
+    background: transparent;
+}
